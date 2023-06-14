@@ -1,0 +1,43 @@
+
+.formulario_login{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    border: 1px solid black;
+    border-radius: 2px;
+
+}
+
+.formulario_contenedor{
+    padding: 2rem;
+    width: 50%;
+    
+}
+
+input{
+    outline: none;
+}
+
+.form_input{
+    padding: 10px;
+    width: 100%;
+    
+}
+
+.form_submit{
+    margin-top: 6px;
+    padding: 7px;
+    background-color: #16A085 ;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 2px;
+    
+}
+
+.form_submit:hover{
+    background-color: #52BE80 ;
+    transition: 0.8s;
+}
