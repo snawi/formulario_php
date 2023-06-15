@@ -1,3 +1,18 @@
+
+<?php
+
+$nombre = $_POST['nombre'];
+
+if($_POST['nombre']){
+echo $nombre;
+}
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +35,18 @@
     ojo
     value = es la informacion que tomamos, pero para algunos inputs no se le coloca el value, solo a los
     submit, checkbox, radio etc.
-    el for en los label es para relacionarlo con los inputs id. -->
+    el for en los label es para relacionarlo con los inputs id.
+    esto dentro del action podemos utilizarla <?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?> es una
+    variable superglobal
+     contiene el nombre del archivo del script actual que se esta ejecutando, para 
+     que los datos del formulario no contengan 
+     código HTML o scripts maliciosos que puedan afectar la seguridad de la aplicación.
+-->
 
 
 
     <form 
-    action="recibe.php" 
+    action=" <?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?> " 
     method="post" 
     class="formulario_login">
 
@@ -37,11 +58,11 @@
             class="form_input"
             >
             
-            <label for="sexo">Hombre</label>
+            <label for="hombre">Hombre</label>
             <input 
             type="radio"
             value="hombre"
-            id="sexo"
+            id="hombre"
             name="sexo"
             >
 
@@ -54,7 +75,7 @@
             >
             <br>
 
-            <select name="" id="" >
+            <select name="seleccion" id="" >
                 <option value="">--seleccione--</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
